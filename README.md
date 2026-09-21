@@ -2,8 +2,6 @@
 
 A production-grade text classifier that detects toxic / policy-violating content, fine-tuned from **DistilBERT** and optimized for low-latency (**<50 ms**) inference using **ONNX + INT8 quantization**, served via a **FastAPI** REST endpoint.
 
-All project code lives in [`Real-time-content-moderation-main/`](Real-time-content-moderation-main/).
-
 ---
 
 ## Architecture
@@ -27,7 +25,6 @@ raw text → tokenize → DistilBERT fine-tuned → ONNX quantized → FastAPI /
 ## Setup
 
 ```bash
-cd Real-time-content-moderation-main
 python3 -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -148,7 +145,7 @@ Actual Toxic           58     45
 ## Project Structure
 
 ```
-Real-time-content-moderation-main/
+.
 ├── requirements.txt         # Pinned deps (Python 3.13)
 ├── pytest.ini               # asyncio_mode = auto
 ├── README.md
